@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex 布局实例</title>
+	<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+	html,body{
+		height: 100%;
+	}
+	body{
+		background: linear-gradient(top, #222, #333);
+		display: -webkik-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-content: center;
+
+	}
+	[class^='box']{
+		margin: 16px;
+		padding: 4px;
+		background-color: #e7e7e7;
+		width: 104px;
+		height: 104px;
+		box-shadow: insert 0 5px white,
+		object-fit:contain;
+		insert 0 -5px #bbb,
+		insert 5px 0 #d7d7d7,
+		insert -5px 0 #d7d7d7;
+		border-radius: 10%;
+	}
+	.box1{
+       display: flex;
+       /*justify-content: center;
+       align-items: center;*/
+	}
+/*第二个盒子*/
+	.box2{
+		display: -webkik-flex;
+		display: flex;
+		justify-content: space-between;
+	}
+	.box2 .item:nth-of-type(2){
+		align-self: flex-end;
+	}
+/*第三个盒子*/
+	.box3{
+		display: -webkik-flex;
+		display: flex;
+		justify-content: space-between;
+	}
+	.box3 .item:nth-of-type(2){
+		align-self: center;
+	}
+	.box3 .item:nth-of-type(3){
+		align-self: flex-end;
+	}
+    /*第四个盒子*/
+    .box4,.box6,.box5{
+   	display: flex;
+   	justify-content: space-between;
+    
+   	
+   }
+   .box4 .col,.box6 .col,.box5 .col{
+   	display: flex;
+  	justify-content: space-between;
+  	flex-direction: column;
+   }
+   .box5 .col:nth-of-type(2){
+   	justify-content: center;
+   }
+  
+
+   
+	.item{
+		display: block;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		margin: 4px;
+		 background-color: #333;
+		 box-shadow: insert 0 3px #111,insert 0 -3px #555;
+	}
+	</style>
+	
+</head>
+<body>
+	<!-- 一个圆点情况 -->
+	<div class="box1">
+		<span class="item"></span>
+	</div>
+	<!-- 两个圆点称对角线排列 -->
+	<div class="box2">
+		<span class="item"></span>
+		<span class="item"></span>
+	</div>
+	<div class="box3">
+		<span class="item"></span>
+		<span class="item"></span>
+		<span class="item"></span>
+	</div>
+	<div class="box4">
+		<div class="col">
+			<span class="item"></span>
+			<span class="item"></span>
+		
+        </div>
+        <div class="col">
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+	</div>
+	<div class="box5">
+		<div class="col">
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+        <div class="col">
+			<span class="item"></span>
+		</div>
+        <div class="col">
+			<span class="item"></span>
+			<span class="item"></span>
+			
+		</div>
+	</div>
+	<div class="box6">
+		<div class="col">
+			<span class="item"></span>
+			<span class="item"></span>
+			<span class="item"></span>
+		
+        </div>
+        <div class="col">
+			<span class="item"></span>
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+	</div>
+
+</body>
+</html>
